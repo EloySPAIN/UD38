@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { RymService } from './rym.service';
 
 @Component({
   selector: 'app-characters',
@@ -9,17 +9,11 @@ import { HttpClient } from '@angular/common/http';
 export class CharactersComponent implements OnInit {
   personajes: any = null;
 
-  configUrl = 'assets/database.json';
+  constructor(private rymService: RymService) { }
 
-  constructor(private http: HttpClient) { }
-
-  ngOnInit(): void {
-    this.http.get(this.configUrl).subscribe(result => {
-      this.personajes = result;
-    },
-    error => {
-      console.log("Problemas");
-    });
+  ngOnInit() {
+    this.rymService.devolver()
+      .subscribe( result => this.personajes = result)
   }
 
 }
