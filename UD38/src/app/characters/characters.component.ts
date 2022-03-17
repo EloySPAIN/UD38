@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { RymService } from './rym.service';
+import { Component, OnInit, Input } from '@angular/core';
+import { RymService } from 'src/app/characters/servicios/rym.service';
 
 @Component({
   selector: 'app-characters',
@@ -7,7 +7,7 @@ import { RymService } from './rym.service';
   styleUrls: ['./characters.component.css']
 })
 export class CharactersComponent implements OnInit {
-  personajes: any = null;
+  @Input() personajes: any = null;
 
   constructor(private rymService: RymService) { }
 

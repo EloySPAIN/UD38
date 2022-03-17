@@ -1,0 +1,17 @@
+<div class="mb-1 container" style="margin-top: 10%; margin-left: 30%;">
+  <div class="row g-0">
+    <div class="col-md-3">
+      <img src="{{personajes.image}}" class="img-fluid rounded-start" alt="{{personajes.name}}">
+      <a routerLink="/characters" class="btn btn-warning mx-5" style="margin-top: 6%;">Vuelve!</a>
+    </div>
+    <div class="col-md-3">
+      <h2 class="card-title mt-1">{{personajes.name}}</h2>
+      <div class="card-body mt-2">
+        <p class="card-text">Id: {{personajes.id}}</p>
+        <p class="card-text">Genero: {{personajes.gender}}</p>
+        <p class="card-text">Especie: {{personajes.species}}</p>
+        <p class="card-text">Ubicación: {{personajes.location.name}}</p>
+      </div>
+    </div>
+  </div>
+</div>

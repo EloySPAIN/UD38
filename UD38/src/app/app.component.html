@@ -11,9 +11,9 @@
   <div class="container d-flex flex-wrap">
     <a class="navbar-brand" href="#">Rick and Morty</a>
     <ul class="nav menu">
-      <li class="nav-item"><a [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" [routerLink]="['/']" class="btn btn-primary nav-item nav-link link-dark px-3 text-light mx-1">Home</a></li>
+      <li class="nav-item"><a [routerLink]="['/']" class="btn btn-primary nav-item nav-link link-dark px-3 text-light mx-1">Home</a></li>
       <li class="nav-item"><a [routerLink]="['/characters']" class="btn btn-primary nav-item nav-link link-dark px-3 text-light mx-1">Characters</a></li>
-      <li class="nav-item"><a [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" [routerLink]="['/about']" class="btn btn-primary nav-item nav-link link-dark px-3 text-light mx-1">About</a></li>
+      <li class="nav-item"><a [routerLink]="['/about']" class="btn btn-primary nav-item nav-link link-dark px-3 text-light mx-1">About</a></li>
       <form class="d-flex">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
